@@ -17,34 +17,43 @@ body {
     min-height: 100vh;
     background-color: #EFEFEF;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: minmax(200px, 300px) 5fr;
 }
 
 aside {
     padding: 20px;
     background-color: hsl(201deg 79% 46%);
     grid-column: 1;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 50px;
 }
 
 #logo {
-    margin: 20px 0;
     color: white;
+    font-size: 1.9rem;
+    font-weight: bolder;
+    padding: 20px 0;
+}
+
+.nav-list {
+    display: grid;
+    gap: 20px;
+}
+
+.nav-list a {
+    color: white;
+    font-weight: bolder;
     font-size: 1.2rem;
-    font-weight: bolder;
+    padding: 5px;
 }
 
-aside ul {
-    list-style-type: none;
-    margin: 20px 0;
+.nav-list a:hover {
+    color: #e9e9e9;
 }
 
-aside ul li {
-    padding: 16px;
-}
-
-aside ul li a {
-    color: white;
-    font-weight: bolder;
+aside svg {
+    margin-right: 10px;
 }
 
 #content {
