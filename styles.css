@@ -5,8 +5,13 @@
     padding: 0;
 }
 
-a {
+* a {
+    color: inherit;
     text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 10px 0;
 }
 
 body {
@@ -67,24 +72,97 @@ header {
     background-color: white;
     border-bottom: 2px solid lightgray;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 50px 1fr;
     gap: 20px;
+    align-items: center;
 }
 
 #search {
-    background-color: red;
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+}
+
+
+#search svg {
+    font-size: 24px;
+    align-self: center;
+}
+
+#search input[type=text] {
+    align-self: center;
+    line-height: 24px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background-color: #EFEFEF;
+    border: none;
 }
 
 #alerts {
-    background-color: green;
+    display: grid;
+    grid-template-columns: 32px 48px 1fr;
+    gap: 30px;
+    align-self: center;
+    justify-self: flex-end;
+    align-items: center;
+}
+
+#alerts svg:not(.avatar) {
+    font-size: 24px;
+    align-self: center;
+}
+
+#username {
+    font-weight: bolder;
+    align-self: center;
+}
+
+#account {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+}
+
+#account span {
+    grid-column: 1;
+}
+
+#account svg {
+    align-self: center;
+    justify-self: center;
+    font-size: 72px;
 }
 
 #account-details {
-    background-color: blue;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-weight: bolder;
+}
+
+#hellomessage {
+    font-size: 0.75rem;
+    align-self: center;
+}
+
+#hellomessagename {
+    
 }
 
 #upload-share {
-    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 35px;
+    gap: 20px;
+}
+
+.headerbutton {
+    background-color: hsl(201deg 79% 46%);
+    border: none;
+    color: white;
+    font-weight: bolder;
+    border-radius: 8px;
 }
 
 main {
@@ -120,16 +198,18 @@ main {
     justify-self: flex-end;
     align-self: flex-end;
     padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .project-share a {
-    color: gray;
+    color: rgb(58, 58, 58);
 }
 
 .project-share svg {
-    font-size: 32px;
+    font-size: 24px;
 }
-
 
 #announcements-trending {
     display: grid;
@@ -152,7 +232,7 @@ main {
 
 .announcement {
     padding: 15px 0;
-    border-bottom: 1px solid grey;
+    border-bottom: 3px solid #EFEFEF;
 }
 
 .announcement:last-of-type {
@@ -184,8 +264,6 @@ main {
 .trend svg {
     align-self: center;
     justify-self: center;
-    font-size: 48px;
-    color: hsl(42deg 87% 55%);
 }
 
 .trend-details {
@@ -194,4 +272,9 @@ main {
 
 .trend-details a {
     color: inherit;
+}
+
+.avatar {
+    color: hsl(42deg 87% 55%);
+    font-size: 48px;
 }
